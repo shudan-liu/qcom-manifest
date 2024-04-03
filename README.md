@@ -39,16 +39,27 @@ qsc-cli login -u [username]
 # Host Setup
 
 The host machine needs a few setup operations to ensure the required software tools are ready
-The released software requires the Ubuntu 20.04 host machine. Follow below instructions
 
 ## Install below packages to prepare your host environment for Yocto build
 
+**For ubuntu 20.04**
 ```bash
 sudo apt update
 sudo apt install gawk wget git diffstat unzip texinfo gcc build-essential \
     chrpath socat cpio python3 python3-pip python3-pexpect xz-utils \
     debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa \
     libsdl1.2-dev pylint3 xterm python3-subunit mesa-common-dev zstd \
+    liblz4-tool locales tar python-is-python3 file libxml-opml-simplegen-perl \
+    vim whiptail
+```
+
+**For ubuntu 22.04**
+```bash
+sudo apt update
+sudo apt install gawk wget git diffstat unzip texinfo gcc build-essential \
+    chrpath socat cpio python3 python3-pip python3-pexpect xz-utils \
+    debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa \
+    libsdl1.2-dev pylint xterm python3-subunit mesa-common-dev zstd \
     liblz4-tool locales tar python-is-python3 file libxml-opml-simplegen-perl \
     vim whiptail
 ```
