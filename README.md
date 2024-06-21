@@ -25,33 +25,11 @@ binary SDKs during SDK build.
 sudo apt install curl
 ```
 
-- **Download and Install the debian package for qsc-cli**
-```bash
-curl -L https://softwarecenter.qualcomm.com/api/download/software/qsc/linux/latest.deb -o qsc_installer.deb
-sudo dpkg -i qsc_installer.deb
-```
-
-- **log in to qsc-cli**
-```bash
-qsc-cli login -u [username]
-```
-
 # Host Setup
 
 The host machine needs a few setup operations to ensure the required software tools are ready
 
 ## Install below packages to prepare your host environment for Yocto build
-
-**For ubuntu 20.04**
-```bash
-sudo apt update
-sudo apt install gawk wget git diffstat unzip texinfo gcc build-essential \
-    chrpath socat cpio python3 python3-pip python3-pexpect xz-utils \
-    debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa \
-    libsdl1.2-dev pylint3 xterm python3-subunit mesa-common-dev zstd \
-    liblz4-tool locales tar python-is-python3 file libxml-opml-simplegen-perl \
-    vim whiptail
-```
 
 **For ubuntu 22.04**
 ```bash
@@ -80,6 +58,12 @@ git checkout -b v2.41
 export PATH=~/bin/repo_tool:$PATH
 ```
 
+If your region is blocking access to android.googlesource, try the following configuration to fetch
+repo from Codelinaro mirror
+```bash
+git config --global url.https://git.codelinaro.org/clo/la/tools/repo.insteadOf https://gerrit.googlesource.com/git-repo
+```
+
 If the above method did not work you can try below commands for repo installation
 
 **Note:** latest repo version works with python3
@@ -87,40 +71,6 @@ If the above method did not work you can try below commands for repo installatio
 mkdir -p ~/bin
 curl https://raw.githubusercontent.com/GerritCodeReview/git-repo/v2.41/repo -o ~/bin/repo && chmod +x ~/bin/repo
 export PATH=~/bin:$PATH
-```
-
-## Add your Qualcomm login credentials to .netrc file in your home directory
-
-**Log in to qsc-cli to generate the PAT ( Personalized Access Token )**
-```bash
-qsc-cli login -u <username>
-```
-
-**Run below command to generate the PAT**
-```bash
-qsc-cli pat --get
-```
-
-This command will give output as captured in the Info note below
-The last line in this output is the token, which can be used to access
-Qualcomm Proprietary repositories. This token will expire in two weeks
-```bash
-qsc-cli pat --get
-```
-[Info]: Starting qsc-cli version 0.0.0.9
-
-**5LThNlklb55mMVLB5C2KqUGU2jCF**
-
-vim ~/.netrc # add below entries
-
-```bash
-machine chipmaster2.qti.qualcomm.com
-login <your Qualcomm login id>
-password <your PAT>
-
-machine qpm-git.qualcomm.com
-login <your Qualcomm login id>
-password <your PAT>
 ```
 
 ## Set up locales if you haven't setup already, by using the following commands
@@ -151,16 +101,6 @@ git config --global user.name "Your Name"
 git config --global color.ui auto
 ```
 
-**Add below configuration required to fetch Qualcomm proprietary sources/binaries**
-```bash
-git config --global http.postBuffer 1048576000
-git config --global http.maxRequestBuffer 1048576000
-git config --global http.lowSpeedLimit 0
-git config --global http.lowSpeedTime 999999
-git config --global http.https://chipmaster2.qti.qualcomm.com.followRedirects true
-git config --global http.https://qpm-git.qualcomm.com.followRedirects true
-```
-
 ## Download the Yocto Project BSP
 
 ```bash
@@ -174,10 +114,10 @@ Each branch will have detailed READMEs describing exact syntax.
 
 **Example:**
 
-To download the `qcom-6.6.17-QLI.1.0-Ver.1.3` release
+To download the `qcom-6.6.28-QLI.1.1-Ver.1.0` release
 
 ```bash
-repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m qcom-6.6.17-QLI.1.0-Ver.1.3.xml
+repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m qcom-6.6.28-QLI.1.1-Ver.1.0.xml
 repo sync
 ```
 
