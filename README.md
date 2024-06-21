@@ -48,7 +48,7 @@ export PATH=~/bin/repo_tool:$PATH
 If your region is blocking access to android.googlesource, try the following configuration to fetch
 repo from Codelinaro mirror
 ```bash
-git config --global url.https://git.codelinaro.org/clo/la/tools/repo.insteadOf https://gerrit.googlesource.com/git-repo
+git config --global url.https://git.codelinaro.org/clo/la/tools/repo.insteadOf https://android.googlesource.com/tools/repo
 ```
 
 If the above method did not work you can try below commands for repo installation
@@ -127,6 +127,7 @@ Example for setup Wayland, machine qcm6490:
 ```bash
 MACHINE=qcm6490 DISTRO=qcom-wayland source setup-environment
 ```
+**Note:** [Source to initialize bitbake environment](https://github.com/quic-yocto/meta-qcom-distro/blob/kirkstone/set_bb_env.sh)
 
 ## Build an image
 
@@ -149,6 +150,10 @@ bitbake qcom-multimedia-image
 
 ## To Include add-on layers, refer below README.md files
 
+Mandatory layers:
+1. [Qualcomm Hardware Enablement](https://github.com/quic-yocto/meta-qcom-hwe/blob/kirkstone/README.md)
+
+Optional layers:
 1. [Qualcomm Intelligent Multimedia Product SDK](https://github.com/quic-yocto/meta-qcom-qim-product-sdk/blob/kirkstone/README.md)
 2. [Realtime Linux](https://github.com/quic-yocto/meta-qcom-realtime/blob/kirkstone/README.md)
 3. [Qualcomm Intelligent Robotics Product SDK](https://github.com/quic-yocto/meta-qcom-robotics-sdk/blob/kirkstone/README.md)
