@@ -12,19 +12,6 @@ Below procedure assumes that you have gone through [qualcomm-linux-preview](http
 If you are already having standard yocto environment, skip below prepare Host setup steps
 
 
-# Qualcomm Tools
-
-Run the following commands to set up Qualcomm Package Manager. It is used to generate
-personalized access token to access Qualcomm proprietary software, for example, to fetch
-binary SDKs during SDK build.
-
-## Follow below instructions to install qsc-cli
-
-- **Install curl if you haven't installed already**
-```bash
-sudo apt install curl
-```
-
 # Host Setup
 
 The host machine needs a few setup operations to ensure the required software tools are ready
@@ -65,6 +52,11 @@ git config --global url.https://git.codelinaro.org/clo/la/tools/repo.insteadOf h
 ```
 
 If the above method did not work you can try below commands for repo installation
+
+Install curl if you haven't installed already
+```bash
+sudo apt install curl
+```
 
 **Note:** latest repo version works with python3
 ```bash
