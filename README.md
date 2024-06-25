@@ -106,10 +106,10 @@ Each branch will have detailed READMEs describing exact syntax.
 
 **Example:**
 
-To download the `qcom-6.6.28-QLI.1.1-Ver.1.0` release
+To download the `qcom-6.6.28-QLI.1.1-Ver.1.1` release
 
 ```bash
-repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m qcom-6.6.28-QLI.1.1-Ver.1.0.xml
+repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m qcom-6.6.28-QLI.1.1-Ver.1.1.xml
 repo sync
 ```
 
