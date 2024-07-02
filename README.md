@@ -7,7 +7,7 @@ The branch will be based on the release type Linux with release manifests in eac
 For QCOM Linux Yocto BSP releases the manifest branches will be named as qcom-linux-[Yocto-Project-release],
 so qcom-linux-kirkstone with all manifests tied to releases on Kirkstone in this branch.
 
-Below procedure assumes that you have gone through [qualcomm-linux-preview](https://www.qualcomm.com/products/internet-of-things/industrial/building-enterprise/qualcomm-linux-preview) and have a [valid Qualcomm account](https://www.qualcomm.com/support)
+Below procedure assumes that you have gone through [Qualcomm Linux | Qualcomm](https://www.qualcomm.com/developer/software/qualcomm-linux)
 
 If you are already having standard yocto environment, skip below prepare Host setup steps
 
@@ -160,11 +160,11 @@ Optional layers:
 
 ## Flash the image
 
-To flash the generated build, see the [Flash software](https://docs.qualcomm.com/bundle/resource/topics/80-70014-251/flash_rb3_software_0.html)
+To flash the generated build, see the [Flash software](https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-254/flash_images_unregistered.html)
 
 
 ## References
 
-If you are new to the Yocto project, you may try your first build as documented in the Yocto project at [Standard Yocto environment](https://docs.yoctoproject.org/4.0.14/singleindex.html#document-brief-yoctoprojectqs/index)
+If you are new to the Yocto project, you may try your first build as documented in the Yocto project at [Standard Yocto environment](https://docs.yoctoproject.org/4.0.18/brief-yoctoprojectqs/index.html)
 
-The complete index of Yocto project docs is available at [Yocto project docs](https://docs.yoctoproject.org/4.0.14/singleindex.html#welcome-to-the-yocto-project-documentation)
+The complete index of Yocto project docs is available at [Yocto project docs](https://docs.yoctoproject.org/4.0.18/singleindex.html#welcome-to-the-yocto-project-documentation)
