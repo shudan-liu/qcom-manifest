@@ -9,9 +9,9 @@
   <project name="meta-qcom-robotics-distro" path="layers/meta-qcom-robotics-distro" revision="c1098b5a55afb4388a8389c88d470b8b8b691816" upstream="refs/heads/kirkstone">
     <linkfile dest="setup-robotics-environment" src="set_bb_env.sh"/>
   </project>
-  <project name="meta-qcom-robotics-sdk" path="layers/meta-qcom-robotics-sdk" revision="8dfc85b9996a3e4fb3fd95209f96632857939b91" upstream="refs/heads/kirkstone">
+  <project name="meta-qcom-robotics-sdk" path="layers/meta-qcom-robotics-sdk" revision="00051a4d4ec203b0eb86e65f980e8a64ac57fb5e" upstream="refs/heads/kirkstone">
     <copyfile dest="qirp-build" src="scripts/qirp-build" />
   </project>
-  <project name="meta-qcom-qim-product-sdk" path="layers/meta-qcom-qim-product-sdk" revision="4b54c03503c5216f696edb6314bb74235858218c" upstream="refs/heads/kirkstone"/>
+  <project name="meta-qcom-qim-product-sdk" path="layers/meta-qcom-qim-product-sdk" revision="2fddf7fd1cc427443b70c6e1fb34fb93539dc352" upstream="refs/heads/kirkstone"/>
   <include name="qcom-6.6.28-QLI.1.1-Ver.1.1.xml" />
 </manifest>
