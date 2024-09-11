@@ -3,6 +3,6 @@
   <remote fetch="https://github.com/quic-yocto" name="github" review="github.com"/>
   <default remote="github" revision="refs/heads/kirkstone" sync-j="8"/>
 
-  <project name="meta-qcom-qim-product-sdk" path="layers/meta-qcom-qim-product-sdk" revision="2ffbd2df16e5faa78772c45a0f41292132446485" upstream="refs/heads/kirkstone"/>
+  <project name="meta-qcom-qim-product-sdk" path="layers/meta-qcom-qim-product-sdk" revision="02ab40b2923d7a002bb98f2f471eff0c753585c0" upstream="refs/heads/kirkstone"/>
   <include name="qcom-6.6.38-QLI.1.2-Ver.1.0.xml" />
 </manifest>
