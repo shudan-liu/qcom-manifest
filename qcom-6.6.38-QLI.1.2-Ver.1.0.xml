@@ -14,7 +14,7 @@
   <project name="meta-selinux" path="layers/meta-selinux" remote="yocto" revision="a401f4b2816a0b41ce8d9351542658c721935bcd" upstream="refs/heads/kirkstone"/>
   <project name="meta-rust" path="layers/meta-rust" remote="rust" revision="9611b42d73c7546c3d845da380943a0a4f4205f0" upstream="refs/heads/master"/>
 
-  <project name="meta-qcom-hwe" path="layers/meta-qcom-hwe" revision="6b65a7110217f49f41855c9bfc3b7035ee520444" upstream="refs/heads/kirkstone"/>
+  <project name="meta-qcom-hwe" path="layers/meta-qcom-hwe" revision="cd798c785ccc8e110693630e82411498b75cfb49" upstream="refs/heads/kirkstone"/>
   <project name="meta-qcom-distro" path="layers/meta-qcom-distro" revision="40f6afb30ceeb4e2f1bd85ffd744d6a65aa7a88a" upstream="refs/heads/kirkstone">
     <linkfile dest="setup-environment" src="set_bb_env.sh"/>
   </project>
