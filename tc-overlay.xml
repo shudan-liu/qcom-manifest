@@ -18,6 +18,6 @@
   <project name="meta-qcom-hwe" path="layers/meta-qcom-hwe" revision="8437631082dfa896de8451441d1da9d4f37f0a93" upstream="refs/heads/kirkstone"/>
   <project name="meta-qcom-distro" path="layers/meta-qcom-distro" revision="738a63ed3d009405dcc60ad5a7d51ca92ba2216b" upstream="refs/heads/kirkstone">
     <linkfile dest="setup-environment" src="set_bb_env.sh"/>
-  <project name="meta-tc-overlay" path="layers/meta-tc-overlay" remote="shudan" revision="64b41a210525f4a4b119715f0716232eaa3056a5" upstream="refs/heads/master"/>
+  <project name="meta-tc-overlay" path="layers/meta-tc-overlay" remote="shudan" revision="60cc4844312df15c4d9726cee70361b79d967758" upstream="refs/heads/master"/>
   </project>
 </manifest>
